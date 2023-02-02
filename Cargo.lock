@@ -1416,9 +1416,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_parser"
-version = "0.124.3"
+version = "0.124.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "855e61613186afae0344ebf602b0c83bc4227f262ef63e5fae1e503077ea0abf"
+checksum = "7d6be2a58fe47df9df05382caff88b4e2a6e029b49b0a741c4728ff5d80e7082"
 dependencies = [
  "either",
  "enum_kind",
