@@ -1495,9 +1495,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_utils"
-version = "0.107.3"
+version = "0.107.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4cc62641e475f0cfdef0b63f4f68a94b8762109cd92a0382f69e5d74be5afd5b"
+checksum = "e32354c8cc6f1b39eb86e735623c387361ce4943cab269ae05254aba2cef029a"
 dependencies = [
  "indexmap",
  "num_cpus",
