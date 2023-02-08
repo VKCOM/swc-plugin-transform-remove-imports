@@ -5,7 +5,7 @@ run-name: Test ${{ github.ref_name }}
 on:
   push:
     branches:
-      - master
+      - main
 
 concurrency:
   group: test-${{ github.ref_name }}
