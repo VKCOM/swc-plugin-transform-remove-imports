@@ -33,7 +33,12 @@ jobs:
           always-auth: true
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Install wasm target
+        run: |
+          rustup target add wasm32-wasi
+
       - run: yarn run test
+      - run: yarn run build
 
       - name: Set Git credentials
         run: |
