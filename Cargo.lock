@@ -1754,9 +1754,9 @@ dependencies = [
 
 [[package]]
 name = "testing"
-version = "0.31.38"
+version = "0.31.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "861229d57d0b2cc2910e5aafe5e33e78480b83a64e8ac25ae54d32d0b430ea27"
+checksum = "35fe40c981fab28b566fe4f346ded8d507043b7003ddcf29a612e117a51ba5ae"
 dependencies = [
  "ansi_term",
  "difference",
