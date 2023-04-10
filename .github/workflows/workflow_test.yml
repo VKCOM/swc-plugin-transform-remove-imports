@@ -26,4 +26,30 @@ jobs:
             target/
           key: cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      - run: cargo test --verbose
+      - name: Run Test
+        run: cargo test --verbose
+
+      - name: Run Clippy
+        run: cargo clippy --all-targets --all-features
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.ref }}
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Run Build
+        run: cargo build-wasi --release
+      
+      

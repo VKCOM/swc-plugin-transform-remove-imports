@@ -9,5 +9,3 @@ concurrency:
 jobs:
   test:
     uses: ./.github/workflows/workflow_test.yml
-  clippy:
-    uses: ./.github/workflows/workflow_lint.yml
