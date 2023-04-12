@@ -1485,9 +1485,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_transforms_base"
-version = "0.126.2"
+version = "0.126.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7debd7bec2c25bec733f2be7d0c5a7eed035f0f8e27d6f7bb74fe79d6b50118"
+checksum = "96fdd0ddb81bd98fdbfd71aeaeef5b18a681fd60e429059d5e3a3c754cbadfec"
 dependencies = [
  "better_scoped_tls",
  "bitflags",
