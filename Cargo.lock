@@ -1552,9 +1552,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_visit"
-version = "0.89.1"
+version = "0.89.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "723591cf351dd11f4f0c5d1f3d4a6acd866ee0de3fcbed83c0917b79e983f05b"
+checksum = "c0f65666742d2baa2ae7672ea1a46092c010ffdd90a34ab7f6355d01ca5887d1"
 dependencies = [
  "num-bigint",
  "swc_atoms",
