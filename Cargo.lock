@@ -1508,9 +1508,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_transforms_testing"
-version = "0.129.5"
+version = "0.129.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8b60fb94009b4d5097712586e7a93e231e6ec2d44c0a64c56e8cfef936348540"
+checksum = "e0a5fc47ed383d139ad4a5f2d9c8ab2a75c6f2e1012dc2ebcc348a8492e8388f"
 dependencies = [
  "ansi_term",
  "anyhow",
