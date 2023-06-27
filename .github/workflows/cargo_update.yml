@@ -10,18 +10,6 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: VKCOM/gh-actions/shared/rust/cargo-update-pr@main
         with:
-          ref: main
-
-      - name: Run Update
-        run: cargo update --verbose
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          title: Cargo update
-          branch: github-actions/build/deps/cargo-update
-          commit-message: "build(deps): cargo update"
-          body: Automated cargo update
-          labels: dependencies rust
+          token: ${{ secrets.DEVTOOLS_GITHUB_TOKEN }}
