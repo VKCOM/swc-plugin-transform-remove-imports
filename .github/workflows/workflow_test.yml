@@ -16,15 +16,7 @@ jobs:
         with:
           ref: ${{ inputs.ref }}
 
-      - uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: cargo-${{ hashFiles('**/Cargo.lock') }}
+      - uses: VKCOM/gh-actions/shared/rust/cargo-cache@main
 
       - name: Run Test
         run: cargo test --verbose
@@ -39,15 +31,7 @@ jobs:
         with:
           ref: ${{ inputs.ref }}
 
-      - uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: cargo-${{ hashFiles('**/Cargo.lock') }}
+      - uses: VKCOM/gh-actions/shared/rust/cargo-cache@main
 
       - name: Run Build
         run: cargo build-wasi --release
