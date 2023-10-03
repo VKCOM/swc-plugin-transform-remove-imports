@@ -23,5 +23,8 @@
   "files": [
     "swc_plugin_transform_remove_imports.wasm"
   ],
-  "preferUnplugged": true
+  "preferUnplugged": true,
+  "publishConfig": {
+    "provenance": true
+  }
 }
