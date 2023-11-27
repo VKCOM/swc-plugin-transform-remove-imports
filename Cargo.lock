@@ -1769,9 +1769,9 @@ dependencies = [
 
 [[package]]
 name = "testing"
-version = "0.35.4"
+version = "0.35.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7855b63271220e8b246ab720e825acf966716b099eb798a86ae38774786ad07e"
+checksum = "cdd7c65cc0974fce9e51915c6f9baa4cbe4fd75a4fd54cab20cd9130e6a237b1"
 dependencies = [
  "ansi_term",
  "cargo_metadata",
