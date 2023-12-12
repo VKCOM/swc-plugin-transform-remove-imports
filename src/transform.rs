@@ -195,10 +195,6 @@ import './index.less';
 import './index.main.css';
 import { Button } from 'uiw';
 import { Select } from '@uiw/core';
-"#,
-    r#"
-import { Button } from 'uiw';
-import { Select } from '@uiw/core';
 "#
 );
 
@@ -214,8 +210,6 @@ import './index.less';
 import './index.main.css';
 import { Button } from 'uiw';
 import { Select } from '@uiw/core';
-"#,
-    r#"
 "#
 );
 
@@ -228,9 +222,6 @@ test!(
     effects,
     r#"
 import 'foo';
-import Foo from 'foo';
-"#,
-    r#"
 import Foo from 'foo';
 "#
 );
@@ -245,10 +236,6 @@ test!(
     r#"
 require('./index.less');
 require('./index.main.css');
-const uiw = require('uiw');
-const core = require('@uiw/core');
-"#,
-    r#"
 const uiw = require('uiw');
 const core = require('@uiw/core');
 "#
@@ -267,9 +254,6 @@ require('./index.main.css');
 const uiw = require('uiw');
 const core = require('@uiw/core');
 const test = "test";
-"#,
-    r#"
-const test = "test";
 "#
 );
 
@@ -282,9 +266,6 @@ test!(
     require_effects,
     r#"
 require('foo');
-const foo = require('foo');
-"#,
-    r#"
 const foo = require('foo');
 "#
 );
