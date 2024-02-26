@@ -1282,9 +1282,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_ast"
-version = "0.112.2"
+version = "0.112.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "852a48a24a2533de88298c6b25355bc68fdee31ac21cb4fb8939b7001715353c"
+checksum = "5a20cb4b0fcdc117296fdbe5979889a0a37b160cc76c2b152b1abb510d2a0340"
 dependencies = [
  "bitflags 2.4.2",
  "bytecheck",
