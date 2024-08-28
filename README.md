@@ -18,6 +18,8 @@ npm i -D swc-plugin-transform-remove-imports
 yarn add -D swc-plugin-transform-remove-imports
 ```
 
+You can check the compatibility of versions on https://plugins.swc.rs/
+
 ## Usage
 
 Via `.swcrc`
