@@ -1,9 +1,8 @@
-
 on:
   workflow_call:
     inputs:
       ref:
-        description: 'The branch, tag or SHA to checkout'
+        description: "The branch, tag or SHA to checkout"
         default: ${{ github.ref }}
         required: false
         type: string
@@ -34,6 +33,4 @@ jobs:
       - uses: VKCOM/gh-actions/shared/rust/cargo-cache@main
 
       - name: Run Build
-        run: cargo build-wasi --release
-      
-      
+        run: cargo build-wasip1 --release
