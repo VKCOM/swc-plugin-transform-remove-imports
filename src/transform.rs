@@ -1,7 +1,7 @@
 #[cfg(test)]
 use anyhow::Result;
 #[cfg(test)]
-use swc_core::ecma::visit::as_folder;
+use swc_core::ecma::visit::visit_mut_pass;
 
 use serde::Deserialize;
 use swc_cached::regex::CachedRegex;
@@ -185,7 +185,7 @@ impl VisitMut for TransformVisitor {
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor {
+    |_| visit_mut_pass(TransformVisitor {
         test: Matcher::new("\\.(less|css)$").unwrap(),
         remove: Remove::None,
     }),
@@ -200,7 +200,7 @@ import { Select } from '@uiw/core';
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor {
+    |_| visit_mut_pass(TransformVisitor {
         test: Matcher::new("").unwrap(),
         remove: Remove::None,
     }),
@@ -215,7 +215,7 @@ import { Select } from '@uiw/core';
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor {
+    |_| visit_mut_pass(TransformVisitor {
         test: Matcher::new("foo").unwrap(),
         remove: Remove::Effects,
     }),
@@ -228,7 +228,7 @@ import Foo from 'foo';
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor {
+    |_| visit_mut_pass(TransformVisitor {
         test: Matcher::new("\\.(less|css)$").unwrap(),
         remove: Remove::None,
     }),
@@ -243,7 +243,7 @@ const core = require('@uiw/core');
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor {
+    |_| visit_mut_pass(TransformVisitor {
         test: Matcher::new("").unwrap(),
         remove: Remove::None,
     }),
@@ -259,7 +259,7 @@ const test = "test";
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor {
+    |_| visit_mut_pass(TransformVisitor {
         test: Matcher::new("foo").unwrap(),
         remove: Remove::Effects,
     }),
