@@ -1,6 +1,6 @@
 {
   "name": "swc-plugin-transform-remove-imports",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "SWC plugin for remove imports",
   "license": "MIT",
   "keywords": [
