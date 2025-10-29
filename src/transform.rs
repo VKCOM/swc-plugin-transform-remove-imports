@@ -75,7 +75,9 @@ impl TransformVisitor {
                 }
 
                 if let Expr::Lit(Lit::Str(arg)) = &*call.args[0].expr {
-                    return self.test.matches(&arg.value);
+                    return self
+                        .test
+                        .matches(arg.value.as_str().expect("non-utf8 string"));
                 }
             }
         }
@@ -86,7 +88,10 @@ impl TransformVisitor {
 
 impl VisitMut for TransformVisitor {
     fn visit_mut_import_decl(&mut self, n: &mut ImportDecl) {
-        if !self.test.matches(&n.src.value) {
+        if !self
+            .test
+            .matches(n.src.value.as_str().expect("non-utf8 string"))
+        {
             return;
         }
 
