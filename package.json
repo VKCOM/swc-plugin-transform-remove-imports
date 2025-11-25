@@ -9,7 +9,7 @@
   "homepage": "https://github.com/VKCOM/swc-plugin-transform-remove-imports",
   "repository": {
     "type": "git",
-    "url": "https://github.com/VKCOM/swc-plugin-transform-remove-imports.git"
+    "url": "git+https://github.com/VKCOM/swc-plugin-transform-remove-imports.git"
   },
   "bugs": "https://github.com/VKCOM/swc-plugin-transform-remove-imports/issues",
   "main": "swc_plugin_transform_remove_imports.wasm",
@@ -23,8 +23,5 @@
   "files": [
     "swc_plugin_transform_remove_imports.wasm"
   ],
-  "preferUnplugged": true,
-  "publishConfig": {
-    "provenance": true
-  }
+  "preferUnplugged": true
 }
