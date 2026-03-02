@@ -144,13 +144,11 @@ impl VisitMut for TransformVisitor {
         s.visit_mut_children_with(self);
 
         match s {
-            Stmt::Decl(Decl::Var(var)) => {
-                if var.decls.is_empty() {
-                    // Variable declaration without declarator is invalid.
-                    //
-                    // After this, `s` becomes `Stmt::Empty`.
-                    s.take();
-                }
+            Stmt::Decl(Decl::Var(var)) if var.decls.is_empty() => {
+                // Variable declaration without declarator is invalid.
+                //
+                // After this, `s` becomes `Stmt::Empty`.
+                s.take();
             }
             Stmt::Expr(expr) => {
                 if let Expr::Call(call) = &mut *expr.expr {
